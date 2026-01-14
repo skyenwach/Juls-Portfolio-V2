@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { 
   Mail, Phone, Linkedin, ExternalLink, Send, 
   Palette, Smartphone, Image as ImageIcon, Monitor,
   Briefcase, Users, Award, Trophy, Star, Quote,
-  Figma, Pen, ArrowRight
+  Figma, Pen, ArrowRight, FileText
 } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
