@@ -219,3 +219,82 @@ export const skills = [
   "Figma",
   "Prototyping"
 ];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Michael Chen",
+    role: "CEO, Duncrest & Partners",
+    company: "Duncrest & Partners",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop", // Placeholder
+    text: "Jubilee transformed our brand identity completely. The new logo and branding materials positioned us as the modern, trustworthy firm we aspired to be. Our client engagement increased by 40% after the rebrand!",
+    rating: 5
+  },
+  {
+    id: 2,
+    name: "Sarah Martinez",
+    role: "Owner, Bistro Oma's Pot",
+    company: "Oma's Pot",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop", // Placeholder
+    text: "Working with Jubilee was an absolute pleasure. She captured the warm, welcoming essence of our bistro perfectly. The branding feels like home, and our customers love it. Highly recommend!",
+    rating: 5
+  },
+  {
+    id: 3,
+    name: "Alexandra Rousseau",
+    role: "Creative Director, Moda Vivace",
+    company: "Moda Vivace",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop", // Placeholder
+    text: "Jubilee's understanding of luxury branding is exceptional. She created a visual identity that perfectly embodies our avant-garde spirit while maintaining elegance. Her attention to detail is remarkable.",
+    rating: 5
+  },
+  {
+    id: 4,
+    name: "Dr. James Okafor",
+    role: "Director, iDoc Health Center",
+    company: "iDoc Health Center",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop", // Placeholder
+    text: "The website Jubilee designed for us strikes the perfect balance between professionalism and approachability. Patient appointments increased by 65% in the first quarter. Outstanding work!",
+    rating: 5
+  }
+];
+
+export const services = [
+  {
+    id: 1,
+    title: "Brand Identity Design",
+    description: "Complete brand creation from concept to execution, including logo design, color palettes, and brand guidelines.",
+    icon: "Palette"
+  },
+  {
+    id: 2,
+    title: "UI/UX Design",
+    description: "User-centered digital experiences that are intuitive, accessible, and visually stunning across all devices.",
+    icon: "Smartphone"
+  },
+  {
+    id: 3,
+    title: "Graphic Design",
+    description: "Eye-catching visual content for print and digital media, including marketing materials and social media assets.",
+    icon: "Image"
+  },
+  {
+    id: 4,
+    title: "Web Design",
+    description: "Modern, responsive websites that convert visitors into customers while reflecting your brand's unique personality.",
+    icon: "Monitor"
+  }
+];
+
+export const stats = [
+  { label: "Projects Completed", value: "50+", icon: "Briefcase" },
+  { label: "Happy Clients", value: "35+", icon: "Users" },
+  { label: "Years Experience", value: "5+", icon: "Award" },
+  { label: "Design Awards", value: "8", icon: "Trophy" }
+];
+
+export const tools = [
+  { name: "Figma", icon: "Figma", level: "Expert" },
+  { name: "Canva", icon: "Palette", level: "Expert" },
+  { name: "Affinity Designer", icon: "Pen", level: "Advanced" }
+];
