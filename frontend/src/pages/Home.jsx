@@ -28,7 +28,21 @@ const Home = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const getIconComponent = (iconName) => {
+    const icons = {
+      Palette,
+      Smartphone,
+      Image: ImageIcon,
+      Monitor,
+      Briefcase,
+      Users,
+      Award,
+      Trophy,
+      Figma,
+      Pen
+    };
+    return icons[iconName] || Palette;
+  };
     e.preventDefault();
     setIsSubmitting(true);
     
