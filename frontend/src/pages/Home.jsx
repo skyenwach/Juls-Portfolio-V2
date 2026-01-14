@@ -43,6 +43,8 @@ const Home = () => {
     };
     return icons[iconName] || Palette;
   };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     
