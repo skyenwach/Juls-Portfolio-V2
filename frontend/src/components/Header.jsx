@@ -115,12 +115,12 @@ const Header = () => {
               Contact
             </button>
             <Button
-              onClick={() => navigate('/resume')}
+              onClick={handleDownloadResume}
               variant="outline"
               size="sm"
               className="border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white dark:border-purple-400 dark:text-purple-400 dark:hover:bg-purple-500 dark:hover:text-white"
             >
-              <FileText className="w-4 h-4 mr-2" />
+              <Download className="w-4 h-4 mr-2" />
               Resume
             </Button>
             <Button
