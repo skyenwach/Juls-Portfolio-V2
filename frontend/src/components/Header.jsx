@@ -47,9 +47,24 @@ const Header = () => {
           {/* Logo */}
           <button
             onClick={() => scrollToSection('hero')}
-            className="text-xl md:text-2xl font-bold text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
+            className="flex items-center hover:opacity-80 transition-opacity"
           >
-            NJ
+            <img 
+              src={personalInfo.logo} 
+              alt={personalInfo.name}
+              className="h-10 md:h-12 w-auto object-contain"
+              onError={(e) => {
+                // Fallback to text logo if image doesn't exist
+                e.target.style.display = 'none';
+                e.target.nextElementSibling.style.display = 'block';
+              }}
+            />
+            <span 
+              className="text-xl md:text-2xl font-bold text-purple-600 dark:text-purple-400"
+              style={{ display: 'none' }}
+            >
+              NJ
+            </span>
           </button>
 
           {/* Desktop Navigation */}
