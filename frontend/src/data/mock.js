@@ -128,7 +128,33 @@ export const projects = [
       "Maintaining elegance while being bold and contemporary"
     ],
     outcome: "Successfully conveyed Moda Vivace's luxury and innovation. Distinct logo marks and elegant product showcases received positive feedback, enhancing brand perception and market presence.",
-    deliverables: ["Logo Design", "Product Showcase", "Brand Guidelines", "Marketing Materials"],
+    deliverables: [
+      {
+        name: "Logo Design",
+        images: [
+          "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=600&fit=crop", // Placeholder - Fashion logo
+        ]
+      },
+      {
+        name: "Product Showcase",
+        images: [
+          "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=600&fit=crop", // Placeholder - Product display
+          "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&h=600&fit=crop", // Placeholder - Cosmetics
+        ]
+      },
+      {
+        name: "Brand Guidelines",
+        images: [
+          "https://images.unsplash.com/photo-1586281380614-a52dc0ab7e6e?w=800&h=600&fit=crop", // Placeholder - Brand guide
+        ]
+      },
+      {
+        name: "Marketing Materials",
+        images: [
+          "https://images.unsplash.com/photo-1541643600914-78b084683601?w=800&h=600&fit=crop", // Placeholder - Marketing
+        ]
+      }
+    ],
     color: "#EC4899"
   },
   {
