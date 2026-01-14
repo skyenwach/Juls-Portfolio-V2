@@ -361,6 +361,105 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center text-gray-900 dark:text-white">
+              Client <span className="text-purple-600 dark:text-purple-400">Testimonials</span>
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 text-center max-w-3xl mx-auto">
+              Don't just take my word for it - hear what my clients have to say
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={testimonial.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Card className="p-6 h-full border-gray-200 dark:border-gray-800 hover:shadow-lg transition-shadow duration-300">
+                    <div className="flex items-start gap-4 mb-4">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-16 h-16 rounded-full object-cover"
+                      />
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-gray-900 dark:text-white">
+                          {testimonial.name}
+                        </h4>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                          {testimonial.role}
+                        </p>
+                        <p className="text-sm text-purple-600 dark:text-purple-400">
+                          {testimonial.company}
+                        </p>
+                      </div>
+                      <Quote className="w-8 h-8 text-purple-200 dark:text-purple-900" />
+                    </div>
+                    <div className="flex mb-3">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-700 dark:text-gray-300 italic">
+                      "{testimonial.text}"
+                    </p>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-600 to-purple-500 dark:from-purple-700 dark:to-purple-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Ready to Start Your Project?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+              Let's collaborate to bring your vision to life. I'm here to help transform your ideas into stunning designs that resonate with your audience.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button
+                onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+                size="lg"
+                className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-6 text-lg rounded-full"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Get In Touch
+              </Button>
+              <Button
+                onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
+                variant="outline"
+                size="lg"
+                className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-full"
+              >
+                <ArrowRight className="w-5 h-5 mr-2" />
+                View My Work
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
         <div className="max-w-4xl mx-auto">
