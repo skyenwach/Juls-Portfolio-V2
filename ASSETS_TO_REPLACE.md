@@ -159,16 +159,42 @@ You can enhance project information in `/app/frontend/src/data/mock.js`:
 
 ## 🔧 How to Replace Images
 
-### Method 1: Use Your Own Hosted Images
-1. Host your images on a service (Cloudinary, AWS S3, or your own server)
-2. Update the image URLs in `/app/frontend/src/data/mock.js`
+### Method 1: Update URLs in mock.js
+Open `/app/frontend/src/data/mock.js` and find the project you want to update. The structure looks like this:
+
+```javascript
+deliverables: [
+  {
+    name: "Logo Design",
+    images: [
+      "URL_TO_YOUR_FIRST_IMAGE",
+      "URL_TO_YOUR_SECOND_IMAGE"
+    ]
+  },
+  {
+    name: "Brand Pattern",
+    images: [
+      "URL_TO_YOUR_IMAGE"
+    ]
+  }
+]
+```
+
+**For each deliverable:**
+1. Locate the `images` array
+2. Replace the placeholder URLs with your actual image URLs
+3. You can have 1-5 images per deliverable
+4. Recommended image size: 1200x800px or higher for best quality
 
 ### Method 2: Use Local Images
-1. Create folder: `/app/frontend/public/images/projects/`
-2. Add your images (e.g., `duncrest.jpg`, `omas-pot.jpg`, etc.)
-3. Update URLs in `/app/frontend/src/data/mock.js` to:
+1. Create folder: `/app/frontend/public/images/projects/duncrest/`
+2. Add your images with descriptive names (e.g., `logo-primary.jpg`, `logo-variants.jpg`)
+3. Update the URLs in mock.js:
    ```javascript
-   image: "/images/projects/duncrest.jpg"
+   images: [
+     "/images/projects/duncrest/logo-primary.jpg",
+     "/images/projects/duncrest/logo-variants.jpg"
+   ]
    ```
 
 ---
