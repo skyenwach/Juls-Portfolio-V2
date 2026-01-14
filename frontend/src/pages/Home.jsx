@@ -124,32 +124,37 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900 dark:text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-gray-900 dark:text-white">
               About <span className="text-purple-600 dark:text-purple-400">Me</span>
             </h2>
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <div className="space-y-6">
+            <div className="grid md:grid-cols-5 gap-12 items-start">
+              {/* Profile Image */}
+              <div className="md:col-span-2 flex justify-center">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-400 rounded-2xl transform rotate-6"></div>
+                  <img
+                    src={personalInfo.profileImage}
+                    alt={personalInfo.name}
+                    className="relative rounded-2xl w-full max-w-sm object-cover shadow-2xl"
+                    style={{ aspectRatio: '3/4' }}
+                  />
+                </div>
+              </div>
+
+              {/* About Content */}
+              <div className="md:col-span-3 space-y-6">
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                   {personalInfo.introduction}
                 </p>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                   {personalInfo.aboutLong}
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button
-                    onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-                    className="bg-purple-600 hover:bg-purple-700 text-white"
-                  >
-                    <Mail className="w-4 h-4 mr-2" />
-                    Contact Me
-                  </Button>
-                </div>
-              </div>
-              <div>
-                <Card className="p-6 border-gray-200 dark:border-gray-800">
-                  <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Skills & Expertise</h3>
+
+                {/* Skills */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Core Skills</h3>
                   <div className="flex flex-wrap gap-2">
-                    {skills.map((skill, index) => (
+                    {skills.slice(0, 8).map((skill, index) => (
                       <Badge
                         key={index}
                         variant="secondary"
@@ -159,19 +164,32 @@ const Home = () => {
                       </Badge>
                     ))}
                   </div>
-                  <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-                    <h4 className="text-sm font-semibold mb-3 text-gray-900 dark:text-white">Contact Information</h4>
-                    <div className="space-y-2">
-                      <div className="flex items-center text-sm text-gray-700 dark:text-gray-300">
-                        <Mail className="w-4 h-4 mr-2 text-purple-600 dark:text-purple-400" />
+                </div>
+
+                {/* Contact Info Card */}
+                <Card className="p-6 border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+                  <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Get In Touch</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-center text-gray-700 dark:text-gray-300">
+                      <Mail className="w-5 h-5 mr-3 text-purple-600 dark:text-purple-400" />
+                      <a href={`mailto:${personalInfo.email}`} className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                         {personalInfo.email}
-                      </div>
-                      <div className="flex items-center text-sm text-gray-700 dark:text-gray-300">
-                        <Phone className="w-4 h-4 mr-2 text-purple-600 dark:text-purple-400" />
+                      </a>
+                    </div>
+                    <div className="flex items-center text-gray-700 dark:text-gray-300">
+                      <Phone className="w-5 h-5 mr-3 text-purple-600 dark:text-purple-400" />
+                      <a href={`tel:${personalInfo.phone}`} className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                         {personalInfo.phone}
-                      </div>
+                      </a>
                     </div>
                   </div>
+                  <Button
+                    onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+                    className="w-full mt-6 bg-purple-600 hover:bg-purple-700 text-white"
+                  >
+                    <Mail className="w-4 h-4 mr-2" />
+                    Send Me a Message
+                  </Button>
                 </Card>
               </div>
             </div>
