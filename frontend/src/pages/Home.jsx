@@ -197,6 +197,119 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center text-gray-900 dark:text-white">
+              Services I <span className="text-purple-600 dark:text-purple-400">Offer</span>
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 text-center max-w-3xl mx-auto">
+              Comprehensive design solutions tailored to elevate your brand and engage your audience
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {services.map((service, index) => {
+                const IconComponent = getIconComponent(service.icon);
+                return (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <Card className="p-6 h-full border-gray-200 dark:border-gray-800 hover:shadow-lg transition-shadow duration-300 group">
+                      <div className="w-14 h-14 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <IconComponent className="w-7 h-7 text-purple-600 dark:text-purple-400" />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-700 dark:text-gray-300">
+                        {service.description}
+                      </p>
+                    </Card>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-600 to-purple-500 dark:from-purple-700 dark:to-purple-600">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => {
+              const IconComponent = getIconComponent(stat.icon);
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <IconComponent className="w-8 h-8 mx-auto mb-3 text-white" />
+                  <p className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</p>
+                  <p className="text-sm md:text-base text-purple-100">{stat.label}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Tools Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-900 dark:text-white">
+              Tools I <span className="text-purple-600 dark:text-purple-400">Master</span>
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {tools.map((tool, index) => {
+                const IconComponent = getIconComponent(tool.icon);
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <Card className="p-6 text-center border-gray-200 dark:border-gray-800 hover:shadow-lg transition-shadow duration-300">
+                      <div className="w-16 h-16 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mx-auto mb-4">
+                        <IconComponent className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                        {tool.name}
+                      </h3>
+                      <Badge variant="secondary" className="bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 border-0">
+                        {tool.level}
+                      </Badge>
+                    </Card>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
