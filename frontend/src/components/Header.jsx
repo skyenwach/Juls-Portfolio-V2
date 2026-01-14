@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Moon, Sun, Menu, X, Download } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Moon, Sun, Menu, X, FileText, Download } from 'lucide-react';
 import { Button } from './ui/button';
 import { useTheme } from 'next-themes';
 import { personalInfo } from '../data/mock';
@@ -9,6 +10,8 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     setMounted(true);
@@ -20,16 +23,40 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setIsMobileMenuOpen(false);
+    // If we're not on the home page, navigate there first
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setIsMobileMenuOpen(false);
+      }
+    }
+  };
+
+  const handleLogoClick = () => {
+    if (location.pathname !== '/') {
+      navigate('/');
+    } else {
+      scrollToSection('hero');
     }
   };
 
   const handleDownloadResume = () => {
-    // Placeholder - user will replace with actual resume file
-    alert('Please replace the resume file at: /public/assets/Jubilee_Resume.pdf');
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // Adjust path as needed
+    link.download = 'resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   if (!mounted) return null;
@@ -46,7 +73,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <button
-            onClick={() => scrollToSection('hero')}
+            onClick={handleLogoClick}
             className="flex items-center hover:opacity-80 transition-opacity"
           >
             <img 
@@ -163,12 +190,12 @@ const Header = () => {
               Contact
             </button>
             <Button
-              onClick={handleDownloadResume}
+              onClick={() => navigate('/resume')}
               variant="outline"
               className="w-full border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white"
             >
-              <Download className="w-4 h-4 mr-2" />
-              Download Resume
+              <FileText className="w-4 h-4 mr-2" />
+              View Resume
             </Button>
           </nav>
         </div>

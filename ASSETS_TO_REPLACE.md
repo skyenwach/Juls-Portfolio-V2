@@ -2,15 +2,20 @@
 
 This document lists all placeholder assets that need to be replaced with your actual content.
 
-## 📄 Documents to Replace
+## 📄 Resume Information
 
-### 1. Resume/CV File
-**Location:** `/app/frontend/public/assets/Jubilee_Resume.pdf`
-- **Current Status:** Placeholder (file doesn't exist yet)
-- **Action Required:** 
-  1. Create the folder: `/app/frontend/public/assets/`
-  2. Add your resume file as `Jubilee_Resume.pdf`
-  3. The download button in the header and footer will then work correctly
+### Resume Page
+Your resume is now displayed as a **dedicated themed page** at `/resume` instead of a downloadable PDF.
+
+**Features:**
+- Beautiful purple gradient header matching your portfolio
+- Professional timeline layout for work experience
+- All your actual resume content from your CV
+- Print-friendly CSS (buttons hidden when printing)
+- "Print / Save as PDF" button that opens browser print dialog
+- Users can save as PDF using their browser's print function (Ctrl+P or Cmd+P)
+
+**No action needed** - Your resume content has been extracted and beautifully formatted!
 
 ---
 

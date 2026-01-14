@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { 
   Mail, Phone, Linkedin, ExternalLink, Send, 
   Palette, Smartphone, Image as ImageIcon, Monitor,
   Briefcase, Users, Award, Trophy, Star, Quote,
-  Figma, Pen, ArrowRight
+  Figma, Pen, ArrowRight, FileText
 } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
@@ -19,6 +20,7 @@ const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
 
   const filteredProjects = selectedCategory === 'All'
     ? projects
@@ -572,14 +574,13 @@ const Home = () => {
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a
-                href={personalInfo.resumeUrl}
-                download
+              <button
+                onClick={() => navigate('/resume')}
                 className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-purple-100 dark:hover:bg-purple-900/30 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                aria-label="Download Resume"
+                aria-label="View Resume"
               >
-                <ExternalLink className="w-5 h-5" />
-              </a>
+                <FileText className="w-5 h-5" />
+              </button>
             </div>
           </div>
 
