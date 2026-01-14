@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, Linkedin, ExternalLink, Send, CheckCircle2 } from 'lucide-react';
+import { 
+  Mail, Phone, Linkedin, ExternalLink, Send, 
+  Palette, Smartphone, Image as ImageIcon, Monitor,
+  Briefcase, Users, Award, Trophy, Star, Quote,
+  Figma, Pen, ArrowRight
+} from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { Badge } from '../components/ui/badge';
 import { Card } from '../components/ui/card';
 import ProjectCard from '../components/ProjectCard';
-import { personalInfo, projects, categories, skills } from '../data/mock';
+import { personalInfo, projects, categories, skills, testimonials, services, stats, tools } from '../data/mock';
 import { toast } from '../hooks/use-toast';
 
 const Home = () => {
