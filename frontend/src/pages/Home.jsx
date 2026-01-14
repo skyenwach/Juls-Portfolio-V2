@@ -42,8 +42,19 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
-        <div className="max-w-6xl mx-auto text-center">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 overflow-hidden">
+        {/* Hero Background Image */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-transparent to-purple-400/10 dark:from-purple-600/20 dark:to-purple-400/20 z-10" />
+          <img
+            src={personalInfo.heroImage}
+            alt="Creative workspace"
+            className="w-full h-full object-cover opacity-20 dark:opacity-10"
+          />
+        </div>
+
+        {/* Hero Content */}
+        <div className="max-w-6xl mx-auto text-center relative z-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
