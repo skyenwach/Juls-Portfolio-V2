@@ -6,12 +6,13 @@ export const personalInfo = {
   email: "jubileenwachukwu@yahoo.com",
   phone: "+2348132389486",
   tagline: "Crafting Visual Stories That Connect",
+  logo: "/assets/logo.png", // Placeholder - Replace with your logo
+  heroImage: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&h=800&fit=crop", // Placeholder - Creative workspace
   introduction: "Welcome to my portfolio. I believe that every design has a story to tell. Through this portfolio, you'll journey through my creative process, understanding the unique challenges and solutions for each project. Join me as I showcase a few of my favorite projects, highlighting not just the final designs but the stories behind them.",
   aboutLong: "I'm a passionate Brand & Graphic Designer with expertise in UI/UX design, dedicated to creating meaningful visual experiences that resonate with audiences. With years of experience working with diverse clients, from real estate consultancies to luxury fashion brands, I bring a unique blend of creativity and strategic thinking to every project. My approach combines thorough research, creative exploration, and meticulous attention to detail to deliver designs that not only look stunning but also achieve business objectives.",
   resumeUrl: "/assets/Jubilee_Resume.pdf", // Placeholder - user will replace
   socialLinks: {
     linkedin: "https://linkedin.com/in/jubilee-nwachukwu",
-    behance: "https://behance.net/jubileenwachukwu",
     twitter: "https://twitter.com/jubilee_design",
     instagram: "https://instagram.com/jubilee.designs"
   }
