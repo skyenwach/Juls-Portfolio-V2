@@ -10,7 +10,60 @@ This document lists all placeholder assets that need to be replaced with your ac
 - **Action Required:** 
   1. Create the folder: `/app/frontend/public/assets/`
   2. Add your resume file as `Jubilee_Resume.pdf`
-  3. The download button in the header will then work correctly
+  3. The download button in the header and footer will then work correctly
+
+---
+
+## 🖼️ Images to Replace
+
+### 1. Logo
+**Location:** `/app/frontend/public/assets/logo.png`
+- **Current Status:** Falls back to "NJ" text if not found
+- **Recommended Size:** 200x80px (PNG with transparent background)
+- **Action Required:** Add your logo to the public assets folder
+
+### 2. Profile/Headshot Image
+**Current URL in mock.js:**
+```
+https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop
+```
+- **Location in Code:** `personalInfo.profileImage` in `/app/frontend/src/data/mock.js`
+- **Recommended Size:** 800x1000px (3:4 aspect ratio for best display)
+- **Action Required:** Replace with your professional headshot
+
+### 3. Hero Background Image
+**Current URL in mock.js:**
+```
+https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&h=800&fit=crop
+```
+- **Location in Code:** `personalInfo.heroImage` in `/app/frontend/src/data/mock.js`
+- **Recommended Size:** 1920x1080px or higher
+- **Description:** Creative workspace/design studio image
+- **Action Required:** Replace with your workspace or a relevant creative image
+
+---
+
+## 👤 Testimonial Images
+
+All testimonial client photos are placeholders. Update in `/app/frontend/src/data/mock.js`:
+
+1. **Michael Chen (Duncrest & Partners)**
+   - Current: Generic male professional photo
+   - Replace with actual client photo or keep placeholder
+
+2. **Sarah Martinez (Oma's Pot)**
+   - Current: Generic female professional photo
+   - Replace with actual client photo or keep placeholder
+
+3. **Alexandra Rousseau (Moda Vivace)**
+   - Current: Generic female professional photo
+   - Replace with actual client photo or keep placeholder
+
+4. **Dr. James Okafor (iDoc Health Center)**
+   - Current: Generic male professional photo
+   - Replace with actual client photo or keep placeholder
+
+**Note:** If you don't have client photos, these generic placeholders work well and look professional.
 
 ---
 
