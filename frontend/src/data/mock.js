@@ -172,7 +172,33 @@ export const projects = [
       "Highlighting key services and CTAs effectively"
     ],
     outcome: "Effectively communicated iDoc Health Center's services, building trust and encouraging user engagement. Received positive feedback, enhancing the center's online presence and increasing patient appointments.",
-    deliverables: ["Landing Page Design", "UI/UX Design", "Responsive Design", "Accessibility Features"],
+    deliverables: [
+      {
+        name: "Landing Page Design",
+        images: [
+          "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop", // Placeholder - Website mockup
+          "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop", // Placeholder - Web design
+        ]
+      },
+      {
+        name: "UI/UX Design",
+        images: [
+          "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=600&fit=crop", // Placeholder - UI design
+        ]
+      },
+      {
+        name: "Responsive Design",
+        images: [
+          "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop", // Placeholder - Mobile mockup
+        ]
+      },
+      {
+        name: "Accessibility Features",
+        images: [
+          "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&h=600&fit=crop", // Placeholder - Accessibility
+        ]
+      }
+    ],
     color: "#10B981"
   }
 ];
