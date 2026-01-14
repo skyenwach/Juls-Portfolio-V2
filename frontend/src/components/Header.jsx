@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Moon, Sun, Menu, X, Download } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Moon, Sun, Menu, X, FileText } from 'lucide-react';
 import { Button } from './ui/button';
 import { useTheme } from 'next-themes';
 import { personalInfo } from '../data/mock';
