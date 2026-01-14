@@ -20,6 +20,7 @@ const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
 
   const filteredProjects = selectedCategory === 'All'
     ? projects
