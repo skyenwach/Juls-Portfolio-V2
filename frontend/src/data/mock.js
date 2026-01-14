@@ -33,7 +33,40 @@ export const projects = [
       "Ensuring consistency across digital and print media"
     ],
     outcome: "Successfully positioned Duncrest & Partners as a modern and trustworthy firm. Increased brand recognition and engagement on social media.",
-    deliverables: ["Logo Design", "Brand Pattern", "Icon Variants", "Social Media Ads", "Print Materials"],
+    deliverables: [
+      {
+        name: "Logo Design",
+        images: [
+          "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&h=600&fit=crop", // Placeholder - Logo mockup
+          "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=600&fit=crop", // Placeholder - Logo variations
+        ]
+      },
+      {
+        name: "Brand Pattern",
+        images: [
+          "https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=800&h=600&fit=crop", // Placeholder - Pattern design
+        ]
+      },
+      {
+        name: "Icon Variants",
+        images: [
+          "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop", // Placeholder - Icons
+        ]
+      },
+      {
+        name: "Social Media Ads",
+        images: [
+          "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop", // Placeholder - Social media mockup
+          "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=800&h=600&fit=crop", // Placeholder - Social media design
+        ]
+      },
+      {
+        name: "Print Materials",
+        images: [
+          "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop", // Placeholder - Business cards
+        ]
+      }
+    ],
     color: "#7C3AED"
   },
   {
