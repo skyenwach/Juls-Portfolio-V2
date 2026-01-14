@@ -18,47 +18,108 @@ This document lists all placeholder assets that need to be replaced with your ac
 
 All project images are currently using Unsplash placeholder images. Replace them in `/app/frontend/src/data/mock.js`:
 
+### How the Gallery Works:
+Each project now has **deliverables** with multiple images. When visitors click on a deliverable (like "Logo Design"), a gallery modal opens showing all related images. Visitors can:
+- Navigate between images using arrow buttons
+- Click thumbnails to jump to specific images
+- Zoom in/out by clicking the main image
+- Close with the X button or ESC key
+
+---
+
 ### 1. Duncrest & Partners
-**Current Image URL:** 
+**Main Project Image:**
 ```
 https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop
 ```
-**Description:** Modern office building (real estate theme)
-**Recommended Size:** 800x600px or higher
-**Action Required:** Replace with your actual Duncrest & Partners project mockups/images
+
+**Deliverable Images to Replace:**
+
+**Logo Design** (2 images):
+- Image 1: Logo mockup
+- Image 2: Logo variations
+
+**Brand Pattern** (1 image):
+- Image 1: Pattern design
+
+**Icon Variants** (1 image):
+- Image 1: Icon set
+
+**Social Media Ads** (2 images):
+- Image 1: Social media mockup
+- Image 2: Social media design
+
+**Print Materials** (1 image):
+- Image 1: Business cards/stationery
 
 ---
 
 ### 2. Bistro Oma's Pot
-**Current Image URL:**
+**Main Project Image:**
 ```
 https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop
 ```
-**Description:** Restaurant interior (bistro theme)
-**Recommended Size:** 800x600px or higher
-**Action Required:** Replace with your actual Oma's Pot branding/restaurant images
+
+**Deliverable Images to Replace:**
+
+**Logo Design** (1 image):
+- Image 1: Restaurant logo
+
+**Menu Design** (2 images):
+- Image 1: Menu mockup
+- Image 2: Menu design details
+
+**Print Media** (1 image):
+- Image 1: Print materials
+
+**Social Media Branding** (1 image):
+- Image 1: Social media posts
 
 ---
 
 ### 3. Moda Vivace
-**Current Image URL:**
+**Main Project Image:**
 ```
 https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=600&fit=crop
 ```
-**Description:** Luxury fashion/cosmetics
-**Recommended Size:** 800x600px or higher
-**Action Required:** Replace with your actual Moda Vivace brand images/product showcase
+
+**Deliverable Images to Replace:**
+
+**Logo Design** (1 image):
+- Image 1: Fashion brand logo
+
+**Product Showcase** (2 images):
+- Image 1: Product display
+- Image 2: Cosmetics showcase
+
+**Brand Guidelines** (1 image):
+- Image 1: Brand guide pages
+
+**Marketing Materials** (1 image):
+- Image 1: Marketing collateral
 
 ---
 
 ### 4. iDoc Health Center
-**Current Image URL:**
+**Main Project Image:**
 ```
 https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop
 ```
-**Description:** Healthcare/medical facility
-**Recommended Size:** 800x600px or higher
-**Action Required:** Replace with your actual iDoc Health Center landing page screenshots/mockups
+
+**Deliverable Images to Replace:**
+
+**Landing Page Design** (2 images):
+- Image 1: Website mockup
+- Image 2: Web design details
+
+**UI/UX Design** (1 image):
+- Image 1: UI design screens
+
+**Responsive Design** (1 image):
+- Image 1: Mobile/tablet mockups
+
+**Accessibility Features** (1 image):
+- Image 1: Accessibility showcase
 
 ---
 
