@@ -49,6 +49,16 @@ const Header = () => {
     }
   };
 
+  const handleDownloadResume = () => {
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // Adjust path as needed
+    link.download = 'resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   if (!mounted) return null;
 
   return (
