@@ -317,14 +317,15 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-purple-100 dark:hover:bg-purple-900/30 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href={personalInfo.socialLinks.behance}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={personalInfo.resumeUrl}
+                download
                 className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-purple-100 dark:hover:bg-purple-900/30 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                aria-label="Download Resume"
               >
                 <ExternalLink className="w-5 h-5" />
               </a>
