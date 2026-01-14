@@ -190,12 +190,12 @@ const Header = () => {
               Contact
             </button>
             <Button
-              onClick={handleDownloadResume}
+              onClick={() => navigate('/resume')}
               variant="outline"
               className="w-full border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white"
             >
-              <Download className="w-4 h-4 mr-2" />
-              Download Resume
+              <FileText className="w-4 h-4 mr-2" />
+              View Resume
             </Button>
           </nav>
         </div>
