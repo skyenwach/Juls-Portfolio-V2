@@ -63,7 +63,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <button
-            onClick={() => scrollToSection('hero')}
+            onClick={handleLogoClick}
             className="flex items-center hover:opacity-80 transition-opacity"
           >
             <img 
@@ -105,12 +105,12 @@ const Header = () => {
               Contact
             </button>
             <Button
-              onClick={handleDownloadResume}
+              onClick={() => navigate('/resume')}
               variant="outline"
               size="sm"
               className="border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white dark:border-purple-400 dark:text-purple-400 dark:hover:bg-purple-500 dark:hover:text-white"
             >
-              <Download className="w-4 h-4 mr-2" />
+              <FileText className="w-4 h-4 mr-2" />
               Resume
             </Button>
             <Button
