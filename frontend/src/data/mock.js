@@ -84,7 +84,33 @@ export const projects = [
       "Creating designs that work for both traditional and digital platforms"
     ],
     outcome: "The new branding effectively communicated the bistro's unique charm and atmosphere, attracting more customers and enhancing the overall dining experience.",
-    deliverables: ["Logo Design", "Menu Design", "Print Media", "Social Media Branding"],
+    deliverables: [
+      {
+        name: "Logo Design",
+        images: [
+          "https://images.unsplash.com/photo-1618556450994-a6a128ef0d9d?w=800&h=600&fit=crop", // Placeholder - Restaurant logo
+        ]
+      },
+      {
+        name: "Menu Design",
+        images: [
+          "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800&h=600&fit=crop", // Placeholder - Menu mockup
+          "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=800&h=600&fit=crop", // Placeholder - Menu design
+        ]
+      },
+      {
+        name: "Print Media",
+        images: [
+          "https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?w=800&h=600&fit=crop", // Placeholder - Print materials
+        ]
+      },
+      {
+        name: "Social Media Branding",
+        images: [
+          "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop", // Placeholder - Social media
+        ]
+      }
+    ],
     color: "#F59E0B"
   },
   {
