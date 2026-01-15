@@ -1,9 +1,10 @@
 {
-  "buildCommand": "npm install --force --prefix ./frontend && npm run build --prefix ./frontend",
+  "buildCommand": "npm install --force && npm run build",
   "outputDirectory": "frontend/build",
   "framework": "create-react-app",
   "git": {
     "deploymentEnabled": true
   },
-  "regions": ["iad1"]
+  "regions": ["iad1"],
+  "monorepo": true
 }
