@@ -1,7 +1,10 @@
 {
-  "buildCommand": "cd frontend && npm run build",
+  "buildCommand": "cd frontend && npm install --legacy-peer-deps && npm run build",
   "outputDirectory": "frontend/build",
   "framework": "create-react-app",
+  "git": {
+    "deploymentEnabled": true
+  },
   "env": {
     "REACT_APP_EMAILJS_PUBLIC_KEY": "@emailjs_public_key",
     "REACT_APP_EMAILJS_SERVICE_ID": "@emailjs_service_id",
