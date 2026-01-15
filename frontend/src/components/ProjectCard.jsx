@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { Card } from './ui/card';
-import { Badge } from './ui/badge';
-import { ExternalLink } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { Card } from "./ui/card";
+import { Badge } from "./ui/badge";
+import { ExternalLink } from "lucide-react";
 
 const ProjectCard = ({ project, index }) => {
   const navigate = useNavigate();
@@ -45,7 +45,10 @@ const ProjectCard = ({ project, index }) => {
               <Badge
                 key={idx}
                 variant="secondary"
-                style={{ backgroundColor: `${project.color}20`, color: project.color }}
+                style={{
+                  backgroundColor: `${project.color}20`,
+                  color: project.color,
+                }}
                 className="border-0"
               >
                 {cat}
