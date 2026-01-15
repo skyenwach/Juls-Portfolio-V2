@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import emailjs from "@emailjs/browser";
 import {
   Mail,
   Phone,
   Linkedin,
   ExternalLink,
-  Send,
   Palette,
   Smartphone,
   Image as ImageIcon,
@@ -43,20 +41,7 @@ import { toast } from "../hooks/use-toast";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
-
-  // Initialize EmailJS
-  useEffect(() => {
-    emailjs.init(
-      process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "Tinw1YEoJ4RBJdmSh"
-    );
-  }, []);
 
   const filteredProjects =
     selectedCategory === "All"
@@ -64,10 +49,6 @@ const Home = () => {
       : projects.filter((project) =>
           project.category.includes(selectedCategory)
         );
-
-  const handleInputChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   const getIconComponent = (iconName) => {
     const icons = {
@@ -87,36 +68,10 @@ const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const response = await emailjs.send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID || "service_jvqqiva",
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "template_1wtohv8",
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-          to_email: personalInfo.email,
-        }
-      );
-
-      if (response.status === 200) {
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for reaching out. I'll get back to you soon.",
-        });
-        setFormData({ name: "", email: "", message: "" });
-      }
-    } catch (error) {
-      console.error("Email send error:", error);
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again later.",
-        variant: "destructive",
-      });
-    }
-    setIsSubmitting(false);
+    toast({
+      title: "Contact Form Coming Soon",
+      description: "The contact form will be available shortly.",
+    });
   };
 
   return (
