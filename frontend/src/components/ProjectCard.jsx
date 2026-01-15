@@ -62,4 +62,10 @@ const ProjectCard = ({ project, index }) => {
           <p className="text-gray-700 dark:text-gray-300 line-clamp-2">
             {project.description}
           </p>
+        </div>
+      </Card>
+    </motion.div>
+  );
+};
+
 export default ProjectCard;
