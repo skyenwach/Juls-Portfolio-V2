@@ -53,7 +53,7 @@ const Home = () => {
 
   // Initialize EmailJS
   useEffect(() => {
-    emailjs.init("Tinw1YEoJ4RBJdmSh");
+    emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "Tinw1YEoJ4RBJdmSh");
   }, []);
 
   const filteredProjects =
@@ -89,8 +89,8 @@ const Home = () => {
 
     try {
       const response = await emailjs.send(
-        "service_jvqqiva",
-        "template_1wtohv8",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID || "service_jvqqiva",
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "template_1wtohv8",
         {
           from_name: formData.name,
           from_email: formData.email,
