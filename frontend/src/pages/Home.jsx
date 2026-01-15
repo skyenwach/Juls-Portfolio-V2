@@ -53,7 +53,9 @@ const Home = () => {
 
   // Initialize EmailJS
   useEffect(() => {
-    emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "Tinw1YEoJ4RBJdmSh");
+    emailjs.init(
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "Tinw1YEoJ4RBJdmSh"
+    );
   }, []);
 
   const filteredProjects =
