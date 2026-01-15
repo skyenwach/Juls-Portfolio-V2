@@ -1,9 +1,10 @@
 {
-  "buildCommand": "cd frontend && npm install && npm run build",
+  "buildCommand": "cd frontend && npm install --legacy-peer-deps && npm run build",
   "outputDirectory": "frontend/build",
   "framework": "create-react-app",
   "git": {
     "deploymentEnabled": true
   },
-  "regions": ["iad1"]
+  "regions": ["iad1"],
+  "installCommand": "cd frontend && npm install --legacy-peer-deps"
 }
