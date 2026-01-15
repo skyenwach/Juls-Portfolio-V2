@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
@@ -11,10 +11,16 @@ const ProjectDetail = () => {
   const navigate = useNavigate();
   const [expandedImage, setExpandedImage] = useState(null);
 
+  // Scroll to top when project changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [projectId]);
+
   const project = projects.find((p) => p.id === parseInt(projectId));
   const projectIndex = projects.findIndex((p) => p.id === parseInt(projectId));
   const prevProject = projectIndex > 0 ? projects[projectIndex - 1] : null;
-  const nextProject = projectIndex < projects.length - 1 ? projects[projectIndex + 1] : null;
+  const nextProject =
+    projectIndex < projects.length - 1 ? projects[projectIndex + 1] : null;
 
   if (!project) {
     return (
@@ -126,7 +132,9 @@ const ProjectDetail = () => {
               >
                 <div className="flex-shrink-0">
                   <div className="flex items-center justify-center h-8 w-8 rounded-full bg-purple-600 dark:bg-purple-500">
-                    <span className="text-white font-bold text-sm">{idx + 1}</span>
+                    <span className="text-white font-bold text-sm">
+                      {idx + 1}
+                    </span>
                   </div>
                 </div>
                 <div>
