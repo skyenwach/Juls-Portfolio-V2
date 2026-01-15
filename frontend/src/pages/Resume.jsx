@@ -1,13 +1,22 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Mail, Phone, MapPin, Linkedin, Download, Printer,
-  Briefcase, GraduationCap, Award, Code, Globe
-} from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Card } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
-import { Separator } from '../components/ui/separator';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Download,
+  Printer,
+  Briefcase,
+  GraduationCap,
+  Award,
+  Code,
+  Globe,
+} from "lucide-react";
+import { Button } from "../components/ui/button";
+import { Card } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
+import { Separator } from "../components/ui/separator";
 
 const Resume = () => {
   const handlePrint = () => {
@@ -17,48 +26,61 @@ const Resume = () => {
   const resumeData = {
     name: "JUBILEE NWACHUKWU",
     title: "GRAPHICS DESIGNER",
-    summary: "I am an innovative graphic designer, all about bringing creativity to life and turning ideas into visual wonders. I leverage a blend of strategic vision and hands-on expertise to steer creative and design teams toward elevating brand aesthetics and delivering impactful design solutions. Let's create something extraordinary together.",
+    summary:
+      "I am an innovative graphic designer, all about bringing creativity to life and turning ideas into visual wonders. I leverage a blend of strategic vision and hands-on expertise to steer creative and design teams toward elevating brand aesthetics and delivering impactful design solutions. Let's create something extraordinary together.",
     contact: {
       phone: "+234 813 238 9486",
       email: "jubileenwachukwu@yahoo.com",
       location: "Egbeda, Lagos",
-      linkedin: "jubilee-nwachukwu-983126163"
+      linkedin: "www.linkedin.com/in/juls-graphics",
     },
     experience: [
       {
-        company: "HUSTLE AFRICA",
+        company: "Sunshine Socials",
         title: "Design Lead",
-        period: "Mar 2023 - Present",
-        duration: "12 months",
+        period: "June 2024 - Present",
+        duration: "15+ months",
+        responsibilities: [
+          "Led the creative direction and visual identity development for multiple client campaigns, resulting in a 35% increase in social media engagement.",
+          "Directed and mentored a design team of 4 professionals, establishing design standards and best practices while conducting regular design reviews and feedback sessions.",
+          "Conceptualized and executed comprehensive brand refresh for key clients, enhancing brand perception and driving a 28% uplift in campaign performance metrics.",
+          "Collaborated with marketing and client teams to translate business objectives into compelling visual content, delivering 50+ design assets monthly across various platforms.",
+        ],
+      },
+      {
+        company: "Hustle Africa",
+        title: "Design Lead",
+        period: "Mar 2023 - May 2024",
+        duration: "14 months",
         responsibilities: [
           "Manage the complete creative design process of a team of 3 brand designers, providing direction and support to carry out client objectives.",
           "Boosted visual engagement by 25% through the implementation of a new design strategy, resulting in a 15% increase in customer satisfaction.",
           "Drove a 20% increase in client's sales revenue by leading the redesign of product visuals, enhancing their appeal and marketability.",
-          "Facilitated cross-functional collaboration, reducing project delivery time by 30% and enhancing overall team efficiency."
-        ]
+          "Facilitated cross-functional collaboration, reducing project delivery time by 30% and enhancing overall team efficiency.",
+        ],
       },
       {
-        company: "HUSTLE AFRICA",
+        company: "Hustle Africa",
         title: "Graphics Designer",
         period: "Aug 2022 - Feb 2023",
         duration: "7 months",
         responsibilities: [
           "Designed brand identities and developed brand assets for the agency's clients.",
-          "Designed marketing and social media content for the agency's clients."
-        ]
-      }
+          "Designed marketing and social media content for the agency's clients.",
+        ],
+      },
     ],
     education: {
       degree: "B.ENG MECHANICAL ENGINEERING",
       institution: "Covenant University",
-      period: "2015 - 2020"
+      period: "2015 - 2020",
     },
     certifications: [
       {
         name: "GOOGLE UX DESIGN PROFESSIONAL CERTIFICATE",
         provider: "Coursera",
-        period: "March 2023 - August 2023"
-      }
+        period: "March 2023 - August 2023",
+      },
     ],
     skills: [
       "UI/UX",
@@ -67,7 +89,7 @@ const Resume = () => {
       "Video Editing",
       "Prototyping",
       "Engineering Design & Simulation",
-      "Project Management"
+      "Project Management",
     ],
     tools: [
       "Adobe Photoshop",
@@ -79,9 +101,9 @@ const Resume = () => {
       "Canva",
       "Capcut",
       "Autocad",
-      "Inventor Professional"
+      "Inventor Professional",
     ],
-    languages: ["English", "German"]
+    languages: ["English", "German"],
   };
 
   return (
@@ -140,12 +162,15 @@ const Resume = () => {
               <p className="text-xl md:text-2xl text-purple-100 mb-6">
                 {resumeData.title}
               </p>
-              
+
               {/* Contact Info */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-white">
                 <div className="flex items-center">
                   <Mail className="w-4 h-4 mr-2" />
-                  <a href={`mailto:${resumeData.contact.email}`} className="hover:underline">
+                  <a
+                    href={`mailto:${resumeData.contact.email}`}
+                    className="hover:underline"
+                  >
                     {resumeData.contact.email}
                   </a>
                 </div>
@@ -159,7 +184,7 @@ const Resume = () => {
                 </div>
                 <div className="flex items-center">
                   <Linkedin className="w-4 h-4 mr-2" />
-                  <a 
+                  <a
                     href={`https://linkedin.com/in/${resumeData.contact.linkedin}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -198,7 +223,10 @@ const Resume = () => {
                 </h2>
                 <div className="space-y-6">
                   {resumeData.experience.map((job, index) => (
-                    <div key={index} className="relative pl-8 border-l-2 border-purple-200 dark:border-purple-800">
+                    <div
+                      key={index}
+                      className="relative pl-8 border-l-2 border-purple-200 dark:border-purple-800"
+                    >
                       <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-purple-600 dark:bg-purple-500"></div>
                       <div>
                         <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -212,8 +240,13 @@ const Resume = () => {
                         </p>
                         <ul className="space-y-2">
                           {job.responsibilities.map((resp, idx) => (
-                            <li key={idx} className="text-gray-700 dark:text-gray-300 flex">
-                              <span className="text-purple-600 dark:text-purple-400 mr-2">•</span>
+                            <li
+                              key={idx}
+                              className="text-gray-700 dark:text-gray-300 flex"
+                            >
+                              <span className="text-purple-600 dark:text-purple-400 mr-2">
+                                •
+                              </span>
                               <span>{resp}</span>
                             </li>
                           ))}
@@ -259,7 +292,10 @@ const Resume = () => {
                   Certifications
                 </h2>
                 {resumeData.certifications.map((cert, index) => (
-                  <div key={index} className="pl-8 border-l-2 border-purple-200 dark:border-purple-800 relative">
+                  <div
+                    key={index}
+                    className="pl-8 border-l-2 border-purple-200 dark:border-purple-800 relative"
+                  >
                     <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-purple-600 dark:bg-purple-500"></div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                       {cert.name}
@@ -348,7 +384,7 @@ const Resume = () => {
             {/* Footer */}
             <div className="bg-gray-50 dark:bg-gray-900/50 px-8 md:px-12 py-6 border-t border-gray-200 dark:border-gray-800 text-center">
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                This resume is part of my interactive portfolio at{' '}
+                This resume is part of my interactive portfolio at{" "}
                 <span className="text-purple-600 dark:text-purple-400 font-medium no-print">
                   {window.location.origin}
                 </span>

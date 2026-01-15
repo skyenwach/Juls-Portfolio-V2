@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from './ui/dialog';
-import { Button } from './ui/button';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
+import { Button } from "./ui/button";
 
-const ProjectGallery = ({ isOpen, onClose, deliverable, projectTitle, projectColor }) => {
+const ProjectGallery = ({
+  isOpen,
+  onClose,
+  deliverable,
+  projectTitle,
+  projectColor,
+}) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isZoomed, setIsZoomed] = useState(false);
 
@@ -31,25 +32,25 @@ const ProjectGallery = ({ isOpen, onClose, deliverable, projectTitle, projectCol
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'ArrowRight') nextImage();
-    if (e.key === 'ArrowLeft') previousImage();
-    if (e.key === 'Escape') onClose();
+    if (e.key === "ArrowRight") nextImage();
+    if (e.key === "ArrowLeft") previousImage();
+    if (e.key === "Escape") onClose();
   };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent 
-        className="max-w-5xl h-[90vh] p-0 overflow-hidden"
+      <DialogContent
+        className="max-w-5xl h-[95vh] p-0 overflow-hidden flex flex-col"
         onKeyDown={handleKeyDown}
       >
-        <DialogHeader className="px-6 py-4 border-b border-gray-200 dark:border-gray-800">
+        <DialogHeader className="px-4 py-2 border-b border-gray-200 dark:border-gray-800">
           <div className="flex items-center justify-between">
             <div>
-              <DialogTitle className="text-2xl font-bold text-gray-900 dark:text-white">
+              <DialogTitle className="text-xl font-bold text-gray-900 dark:text-white">
                 {projectTitle}
               </DialogTitle>
-              <p 
-                className="text-sm font-medium mt-1"
+              <p
+                className="text-xs font-medium mt-0.5"
                 style={{ color: projectColor }}
               >
                 {deliverable.name}
@@ -66,9 +67,9 @@ const ProjectGallery = ({ isOpen, onClose, deliverable, projectTitle, projectCol
           </div>
         </DialogHeader>
 
-        <div className="flex-1 relative bg-gray-100 dark:bg-gray-900 overflow-hidden">
+        <div className="flex-1 relative bg-gray-100 dark:bg-gray-900 overflow-hidden min-h-0">
           {/* Main Image */}
-          <div className="absolute inset-0 flex items-center justify-center p-8">
+          <div className="absolute inset-0 flex items-center justify-center p-4">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentImageIndex}
@@ -84,7 +85,7 @@ const ProjectGallery = ({ isOpen, onClose, deliverable, projectTitle, projectCol
                   alt={`${deliverable.name} - Image ${currentImageIndex + 1}`}
                   className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
                 />
-                
+
                 {/* Zoom Indicator */}
                 {!isZoomed && (
                   <div className="absolute top-4 right-4 bg-black/60 text-white p-2 rounded-full">
@@ -127,8 +128,8 @@ const ProjectGallery = ({ isOpen, onClose, deliverable, projectTitle, projectCol
 
         {/* Thumbnail Strip */}
         {images.length > 1 && (
-          <div className="px-6 py-4 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
-            <div className="flex gap-3 overflow-x-auto pb-2">
+          <div className="px-2 py-1 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+            <div className="flex gap-1 overflow-x-auto pb-0.5">
               {images.map((image, index) => (
                 <button
                   key={index}
@@ -136,10 +137,10 @@ const ProjectGallery = ({ isOpen, onClose, deliverable, projectTitle, projectCol
                     setCurrentImageIndex(index);
                     setIsZoomed(false);
                   }}
-                  className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
+                  className={`flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden border-2 transition-all ${
                     index === currentImageIndex
-                      ? 'border-purple-600 dark:border-purple-400 shadow-lg scale-105'
-                      : 'border-gray-300 dark:border-gray-700 hover:border-purple-400 dark:hover:border-purple-500'
+                      ? "border-purple-600 dark:border-purple-400 shadow-lg scale-105"
+                      : "border-gray-300 dark:border-gray-700 hover:border-purple-400 dark:hover:border-purple-500"
                   }`}
                 >
                   <img
