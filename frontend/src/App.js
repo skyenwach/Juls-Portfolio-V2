@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Resume from "./pages/Resume";
+import ProjectDetail from "./pages/ProjectDetail";
 import { Toaster } from "./components/ui/toaster";
 import "./App.css";
 
@@ -48,6 +49,15 @@ function App() {
                   <>
                     <Header />
                     <Home />
+                  </>
+                }
+              />
+              <Route
+                path="/project/:projectId"
+                element={
+                  <>
+                    <Header />
+                    <ProjectDetail />
                   </>
                 }
               />

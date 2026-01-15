@@ -1,0 +1,11 @@
+/* ProjectDetail Styles */
+
+.project-detail-container {
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .project-detail-container {
+    padding: 1rem;
+  }
+}
