@@ -85,3 +85,4 @@ android-sdk/ -e
 # Environment files
 *.env
 *.env.*
+# Deployment test - Thu Jan 15 03:16:52 WAT 2026
