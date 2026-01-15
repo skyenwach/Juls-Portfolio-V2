@@ -1,16 +1,7 @@
 {
-  "buildCommand": "npm install --force && npm run build",
-  "outputDirectory": "build",
   "framework": "create-react-app",
   "git": {
     "deploymentEnabled": true
   },
-  "regions": ["iad1"],
-  "projects": {
-    "frontend": {
-      "root": "frontend",
-      "buildCommand": "npm install --force && npm run build",
-      "outputDirectory": "build"
-    }
-  }
+  "regions": ["iad1"]
 }
